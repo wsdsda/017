@@ -1,0 +1,46 @@
+
+<!DOCTYPE html>
+<html>
+<head> 
+<link rel="stylesheet" href="style.css"> </head>
+<title>CSS Grid Example</title>
+<style>
+.grid {
+  display: grid;
+  grid-gap: 10px;
+  grid-template-areas:
+    "my-header my-header my-header my-header"
+    "my-aside my-section my-nav my-nav"
+    "my-main my-main my-main my-main"
+    "my-footer my-footer my-footer my-footer";
+  grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+}
+
+.box-init {
+  background-color: lightblue;
+  border: 1px solid gray;
+  text-align: center;
+  padding: 10px;
+}
+
+.box-init.grid-init.box-1-header { grid-area: my-header; }
+.box-init.grid-init.box-1-aside { grid-area: my-aside; }
+.box-init.grid-init.box-1-section { grid-area: my-section; }
+.box-init.grid-init.box-1-nav { grid-area: my-nav; }
+.box-init.grid-init.box-1-main { grid-area: my-main; }
+.box-init.grid-init.box-1-footer { grid-area: my-footer; }
+</style>
+</head>
+<body>
+
+<div class="grid">
+  <div class="box-init grid-init box-1-header">HEADER</div>
+  <div class="box-init grid-init box-1-aside">Aвсааааааа апапап пппп ааа  аааа какака кккк ккк ккк ккк E</div>
+  <div class="box-init grid-init box-1-section">SECTION</div>
+  <div class="box-init grid-init box-1-nav">NAV</div>
+  <div class="box-init grid-init box-1-main">ASIDE</div>
+  <div class="box-init grid-init box-1-footer">FOOTER</div>
+</div>
+
+</body>
+</html>
